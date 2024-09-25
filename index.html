@@ -22,12 +22,49 @@
   <link rel="stylesheet" href="assets/recaptcha.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=53S2LH"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=53S2LH" type="text/css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=Mf78MB"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=Mf78MB" type="text/css">
 
   
   
-  
+  <head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Função para obter parâmetros da URL
+            function getUrlParams() {
+                const params = {};
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                
+                for (const [key, value] of urlParams) {
+                    params[key] = value;
+                }
+                
+                return params;
+            }
 
+            // Preenchendo campos do formulário
+            const utmParams = getUrlParams();
+            document.querySelector('input[name="utm_source"]').value = utmParams['utm_source'] || '';
+            document.querySelector('input[name="utm_medium"]').value = utmParams['utm_medium'] || '';
+            document.querySelector('input[name="utm_campaign"]').value = utmParams['utm_campaign'] || '';
+            document.querySelector('input[name="utm_content"]').value = utmParams['utm_content'] || '';
+            document.querySelector('input[name="utm_term"]').value = utmParams['utm_term'] || '';
+            document.querySelector('input[name="url"]').value = window.location.href;
+
+            // Para o IP do usuário, você pode usar um serviço de API, por exemplo, ipify
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.querySelector('input[name="ip"]').value = data.ip;
+                })
+                .catch(err => console.error('Error fetching IP:', err));
+
+            // Para a linguagem do usuário
+            document.querySelector('input[name="language"]').value = navigator.language || navigator.userLanguage;
+        });
+    </script>
+
+</head>
 </head>
 <body>
   
@@ -83,7 +120,7 @@
                     <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">Your personalized countertop with durability, quality and no hidden prices!</h4>
                 </div>
                 <div class="col-lg-12 mx-auto mbr-form" data-form-type="formoid">
-                    <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="tyzfYSERkqZN1MbitR3fytrArALvGEoYlV95XsZHHSR8zyKOhWuU3ljKDZXf2/SbHQNjv5frB32VtsvpZOLy97bPbe0fP7sFwVYvvaALQPsIHcf65CgtI8KqUbS4X1Ai.zK/zt5cOqMx9zATaJCVfyFEdBRZ4KXbv6C7FqGoHZrQ3knED1Ct+pRVOT9JLHXEbthdYd0AL+vgESTzflyfVfBz6iNXEWVSVqH4BSY7rlrQSSJ2YllYbDSRwoqoVKDge">
+                    <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="mOAHDV3//RSdUMqLbA+H0jn7IH6MYObSNim5/q08Qymcuyuyxy0h1elyUJRKcc8fQCPLcLgRhxFLKIHsLn+WWsEzGZwryVNFlCkqmYeNiD78Gu4j14p4r32jU+msWYu1.DGU4zjew4OZsWNpyYx2ms4VgnGqhoQsAQOj4BL+Xk1GVsIxvD5QiqXYHXpZv8i6/i1MrE+UX7isWbTAQBpcyQ1BGs6fx80K3yTo5o5PmurfX50MYaPCt/QtHLH3t7eLS">
                         <div class="row">
                             <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
                             <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
@@ -991,7 +1028,7 @@
                     <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">Our experts will contact you as soon as possible.</h4>
                 </div>
                 <div class="col-lg-12 mx-auto mbr-form" data-form-type="formoid">
-                    <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="IRZP73b3dfojkgVieW1qYdrtLsXIZh+bd4Wscdc7fqqL20GB8sBaCN4wp7TDOlIGsJDO1CYyPhWO/gxTcgcO1atnojq5DuaXtf3+CELHrqeG6DgJBymVDjnRTJ6HZNk7.BinndrQdF8+PmTE368vgD45xiyKywF1Wz3H3QCD6hIh52HURa6v91QNAa0R+5zdSTyqJPdIotZwB3CHvTxB8EjFrG8I0pSuL4lT74ivOwEqlBPAF1P7gObTVzSlFtx7g">
+                    <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="bix6OULCvDTKFkhF3Phj1gznMUL0VhA9sonGGdHGQZ1uGgMtgF5+gymigSh5ZZb1rOa8q2/6W3e4saGQFFdcy+lLtJcfnG2uv/e/7Y3tbgBOMMbAksWbnkQfDEMiFdIP.UZQv6aV05QJ44wBMyQ2qBoGpU8+7uxKY0hs0+lAswX9SBC57vfgtNCehvgwybJilnvMWnvnMzE+xnJUwEriy2B6bxL21QuwaCpPgTlgWVq4WdEFjaa7uZUXJ3/MawNrM">
                         <div class="row">
                             <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
                             <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
@@ -1063,7 +1100,7 @@
         <div class="row">
             <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
 <!--Formbuilder Form-->
-<form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="form"><input type="hidden" name="email" data-form-email="true" value="MG2Gse0PSdMST8+Nrc7+XxrhjzAP6GOZupXYmznsahGcfXfXWuz2QDa+8OZ9n9ovx+kZRQXKXVDbR5OHHXua3+GTW1pTC6dU5tGMk4L+kYk9uDKIdNWltl1P4/AY4XKt.AixDTGQLX7m5piVT0wF/SrhG7EenB+nogsngjeooPye9jNSWmEORBK6wnA33EHiX9PEY87TiPlI8KkgQaF7RoiPrgjLmvjBhY9Wi2lHZKDE33gArsLeSNOn/uU3u7TbY">
+<form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="form"><input type="hidden" name="email" data-form-email="true" value="GLEQRL4BedKWy8woYW0zR6Fr9HihjZi48ey/uQ7wr7opONOeATW+i4PlHtlc3YagjF04NncGdWEz/Ht6gZA0KEtVT6DnpS9HUZC1ePH/KonFYTOj3g0DNgZT1LC60m22.eFRF8Iv7/k1HJj6iyV6KsFfnryEIsRKbb5cCLw9QYaBLx4wgiVw1njebXaBWxGnB1OxnRSXKgcbLtylL5AzlOCJs6hPua3obUGPu5HxwPOtxfOcBxE3ute+0R7RI0BHA">
 <div class="form-row">
 <div hidden="hidden" data-form-alert="" class="alert alert-success col-12"></div>
 <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some problem!</div>
@@ -1127,72 +1164,7 @@
   <script src="assets/formoid.min.js"></script>
   
   
-  <head>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Preencher os campos UTM e outros
-            const urlField = document.querySelector('input[name="url"]');
-            const ipField = document.querySelector('input[name="ip"]');
-            const languageField = document.querySelector('input[name="language"]');
-            const utmSourceField = document.querySelector('input[name="utm_source"]');
-            const utmMediumField = document.querySelector('input[name="utm_medium"]');
-            const utmCampaignField = document.querySelector('input[name="utm_campaign"]');
-            const utmContentField = document.querySelector('input[name="utm_content"]');
-            const utmTermField = document.querySelector('input[name="utm_term"]');
-
-            // Pegar a URL do usuário
-            urlField.value = window.location.href;
-
-            // Preencher os campos de UTM (exemplo)
-            const urlParams = new URLSearchParams(window.location.search);
-            utmSourceField.value = urlParams.get('utm_source') || '';
-            utmMediumField.value = urlParams.get('utm_medium') || '';
-            utmCampaignField.value = urlParams.get('utm_campaign') || '';
-            utmContentField.value = urlParams.get('utm_content') || '';
-            utmTermField.value = urlParams.get('utm_term') || '';
-
-            // Preencher o campo de linguagem
-            languageField.value = navigator.language || navigator.userLanguage;
-
-            // Função para obter o IP do usuário (usando uma API pública)
-            fetch('https://api.ipify.org?format=json')
-                .then(response => response.json())
-                .then(data => {
-                    ipField.value = data.ip;
-                })
-                .catch(error => console.error('Erro ao obter o IP:', error));
-
-            // Ocultar os campos
-            const hiddenFields = [utmSourceField, utmMediumField, utmCampaignField, utmContentField, utmTermField, urlField, ipField, languageField];
-            hiddenFields.forEach(field => {
-                field.style.display = 'none'; // Oculta o campo
-            });
-
-            // Interceptar o envio do formulário
-            const form = document.querySelector('form[name="form"]');
-            form.addEventListener("submit", function(event) {
-                event.preventDefault(); // Previne o envio padrão do formulário
-
-                const formData = new FormData(form);
-                fetch(form.action, {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => {
-                    if (response.ok) {
-                        window.location.href = '/tks'; // Redireciona para /tks em caso de sucesso
-                    } else {
-                        window.location.href = '/formerror'; // Redireciona para /formerror em caso de erro
-                    }
-                })
-                .catch(error => {
-                    console.error('Erro no envio do formulário:', error);
-                    window.location.href = '/formerror'; // Redireciona para /formerror em caso de erro
-                });
-            });
-        });
-    </script>
-</head>
+  
 
 </body>
 </html>
